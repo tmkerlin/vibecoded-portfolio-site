@@ -1,65 +1,57 @@
-import Image from "next/image";
+import Link from "next/link";
+import DotGrid from "./components/DotGrid";
+import CursorTrail from "./components/CursorTrail";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="relative min-h-screen flex flex-col items-start justify-center px-8 md:px-16 lg:px-24 overflow-hidden bg-black pt-20">
+      {/* Cyan-to-navy gradient, like the LinkedIn banner */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: "radial-gradient(ellipse 95% 120% at 5% 50%, rgba(34,237,227,0.60) 0%, #0a1a3e 70%, black 90%)",
+        }}
+      />
+
+      {/* Interactive dot grid */}
+      <DotGrid />
+
+      {/* Pink cursor trail */}
+      <CursorTrail />
+
+      {/* Yellow accent bar across the top */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-brand-yellow" />
+
+      {/* Hero content */}
+      <div className="relative z-10 max-w-4xl">
+        <p className="text-white font-mono text-sm tracking-widest uppercase mb-6">
+          Marketing Ops × AI
+        </p>
+        <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-6">
+          AI-Enhanced<br />
+          <span className="text-brand-pink">Marketing</span><br />
+          Operations.
+        </h1>
+        <p className="text-white text-lg md:text-xl max-w-xl leading-relaxed mb-10">
+          I help businesses modernize their marketing workflows with AI and
+          agentic systems — so your team moves faster and your stack works
+          smarter.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center bg-brand-pink text-white px-8 py-4 rounded-full font-semibold text-base hover:bg-brand-pink/80 transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Let&apos;s Work Together →
+          </Link>
+          <Link
+            href="/about"
+            className="inline-flex items-center justify-center border border-white/20 text-white px-8 py-4 rounded-full font-semibold text-base hover:border-white/50 hover:bg-white/5 transition-colors"
           >
-            Documentation
-          </a>
+            What I Do
+          </Link>
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }
