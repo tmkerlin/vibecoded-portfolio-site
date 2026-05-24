@@ -19,8 +19,11 @@ export default function Home() {
       {/* Pink cursor trail */}
       <CursorTrail />
 
-      {/* Yellow accent bar across the top */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-brand-yellow" />
+
+      {/* Alien monster in the black area */}
+      <div className="absolute right-[77px] bottom-0 text-5xl leading-none select-none pointer-events-none opacity-60" style={{ filter: "sepia(1) saturate(5) hue-rotate(270deg) brightness(0.5)" }}>
+        👾
+      </div>
 
       {/* Hero content */}
       <div className="relative z-10 max-w-4xl">

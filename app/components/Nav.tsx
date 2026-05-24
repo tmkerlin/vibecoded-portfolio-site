@@ -2,7 +2,11 @@ import Link from "next/link";
 
 export default function Nav() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-5 bg-black/90 backdrop-blur-sm" style={{ borderBottom: "2px solid transparent", borderImage: "linear-gradient(to right, black 40%, #EBD02D 100%) 1" }}>
+    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-5 bg-black/90 backdrop-blur-sm">
+      <div
+        className="absolute bottom-0 left-0 right-0"
+        style={{ height: "3px", clipPath: "polygon(0 2px, 100% 0, 100% 100%, 0 100%)", background: "linear-gradient(to right, black 40%, #9E1E6D 100%)" }}
+      />
       <Link href="/" className="text-white font-bold text-2xl tracking-tight">
         Tom Kerlin
       </Link>

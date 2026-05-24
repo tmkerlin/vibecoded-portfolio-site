@@ -2,12 +2,24 @@
 import { useEffect, useRef } from "react";
 
 const SPACING = 24;
-const CURSOR_RADIUS = 75;   // dots within this range of cursor become active
-const LINE_DISTANCE = 72;   // max distance between dots to draw a line
+const CURSOR_RADIUS = 75;
+const LINE_DISTANCE = 72;
+const WAVE_LENGTH = 6;
+const WAVE_SPEED = 0.055;
+
+interface Wave {
+  col: number;
+  row: number;
+  dir: "h" | "v";
+  sign: 1 | -1;
+  progress: number;
+}
 
 export default function DotGrid() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const mouseRef = useRef({ x: -1000, y: -1000 });
+  const wavesRef = useRef<Wave[]>([]);
+  const frameRef = useRef(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -30,17 +42,72 @@ export default function DotGrid() {
 
     let animationId: number;
 
+    // Mirror the CSS radial gradient: ellipse 95% 120% at 5% 50%, fading to black at 90%
+    const gradientAlpha = (x: number, y: number) => {
+      const gcx = canvas.width * 0.05;
+      const gcy = canvas.height * 0.50;
+      const grx = canvas.width * 0.95;
+      const gry = canvas.height * 1.20;
+      const t = Math.sqrt(((x - gcx) / grx) ** 2 + ((y - gcy) / gry) ** 2);
+      if (t < 0.70) return 1.0;
+      if (t > 0.90) return 0.0;
+      return 1 - (t - 0.70) / 0.20;
+    };
+
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       const { x: mx, y: my } = mouseRef.current;
+      const waves = wavesRef.current;
+      frameRef.current++;
+
+      const cols = Math.floor(canvas.width / SPACING);
+      const rows = Math.floor(canvas.height / SPACING);
+
+      // Spawn a new wave every 40 frames (~1.5/sec at 60fps)
+      if (frameRef.current % 25 === 0) {
+        const dir = Math.random() < 0.5 ? "h" : "v";
+        const sign = Math.random() < 0.5 ? 1 : -1 as 1 | -1;
+        // Start position accounts for travel direction so wave stays in bounds
+        const col = dir === "h"
+          ? sign === 1
+            ? Math.floor(Math.random() * (cols - WAVE_LENGTH))
+            : Math.floor(Math.random() * (cols - WAVE_LENGTH)) + WAVE_LENGTH - 1
+          : Math.floor(Math.random() * cols);
+        const row = dir === "v"
+          ? sign === 1
+            ? Math.floor(Math.random() * (rows - WAVE_LENGTH))
+            : Math.floor(Math.random() * (rows - WAVE_LENGTH)) + WAVE_LENGTH - 1
+          : Math.floor(Math.random() * rows);
+        waves.push({ col, row, dir, sign, progress: 0 });
+      }
+
+      // Advance waves and remove completed ones
+      for (let i = waves.length - 1; i >= 0; i--) {
+        waves[i].progress += WAVE_SPEED;
+        if (waves[i].progress > WAVE_LENGTH + 1) waves.splice(i, 1);
+      }
+
+      // Build a fast lookup map: "col,row" -> max wave pulse value
+      const wavePulseMap = new Map<string, number>();
+      for (const wave of waves) {
+        for (let i = 0; i < WAVE_LENGTH; i++) {
+          const wc = wave.dir === "h" ? wave.col + i * wave.sign : wave.col;
+          const wr = wave.dir === "v" ? wave.row + i * wave.sign : wave.row;
+          const p = Math.max(0, 1 - Math.abs(wave.progress - i));
+          const key = `${wc},${wr}`;
+          wavePulseMap.set(key, Math.max(wavePulseMap.get(key) ?? 0, p));
+        }
+      }
 
       // Build list of all dots
-      const dots: { x: number; y: number; influence: number }[] = [];
-      for (let x = SPACING / 2; x < canvas.width; x += SPACING) {
-        for (let y = SPACING / 2; y < canvas.height; y += SPACING) {
+      const dots: { x: number; y: number; influence: number; ga: number; pulse: number }[] = [];
+      for (let xi = 0, x = SPACING / 2; x < canvas.width; x += SPACING, xi++) {
+        for (let yi = 0, y = SPACING / 2; y < canvas.height; y += SPACING, yi++) {
           const dist = Math.sqrt((x - mx) ** 2 + (y - my) ** 2);
           const influence = Math.max(0, 1 - dist / CURSOR_RADIUS);
-          dots.push({ x, y, influence });
+          const ga = gradientAlpha(x, y);
+          const pulse = wavePulseMap.get(`${xi},${yi}`) ?? 0;
+          dots.push({ x, y, influence, ga, pulse });
         }
       }
 
@@ -53,7 +120,7 @@ export default function DotGrid() {
           if (b.influence === 0) continue;
           const dist = Math.sqrt((a.x - b.x) ** 2 + (a.y - b.y) ** 2);
           if (dist > LINE_DISTANCE) continue;
-          const opacity = Math.min(a.influence, b.influence) * (1 - dist / LINE_DISTANCE) * 0.8;
+          const opacity = Math.min(a.influence, b.influence) * (1 - dist / LINE_DISTANCE) * 0.8 * Math.min(a.ga, b.ga);
           ctx.beginPath();
           ctx.moveTo(a.x, a.y);
           ctx.lineTo(b.x, b.y);
@@ -64,12 +131,13 @@ export default function DotGrid() {
       }
 
       // Draw dots on top of lines
-      for (const { x, y, influence } of dots) {
+      for (const { x, y, influence, ga, pulse } of dots) {
+        if (ga === 0) continue;
         const r = Math.round(6 + (255 - 6) * influence);
         const g = Math.round(149 + (255 - 149) * influence);
         const b = Math.round(158 + (255 - 158) * influence);
-        const opacity = 0.30 + influence * 0.70;
-        const radius = 1 + influence * 2;
+        const opacity = (0.30 + influence * 0.70 + pulse * 0.5) * ga;
+        const radius = 1 + influence * 2 + pulse * 3;
 
         ctx.beginPath();
         ctx.arc(x, y, radius, 0, Math.PI * 2);
