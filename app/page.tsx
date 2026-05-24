@@ -1,24 +1,8 @@
 import Link from "next/link";
-import DotGrid from "./components/DotGrid";
-import CursorTrail from "./components/CursorTrail";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen flex flex-col items-start justify-center px-8 md:px-16 lg:px-24 overflow-hidden bg-black pt-20">
-      {/* Cyan-to-navy gradient, like the LinkedIn banner */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: "radial-gradient(ellipse 95% 120% at 5% 50%, rgba(34,237,227,0.60) 0%, #0a1a3e 70%, black 90%)",
-        }}
-      />
-
-      {/* Interactive dot grid */}
-      <DotGrid />
-
-      {/* Pink cursor trail */}
-      <CursorTrail />
-
+    <main className="relative z-10 min-h-screen flex flex-col items-start justify-center px-8 md:px-16 lg:px-24 pt-20">
 
       {/* Alien monster in the black area */}
       <div className="absolute right-[77px] bottom-0 text-5xl leading-none select-none pointer-events-none opacity-60" style={{ filter: "sepia(1) saturate(5) hue-rotate(270deg) brightness(0.5)" }}>

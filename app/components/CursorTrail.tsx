@@ -96,10 +96,12 @@ export default function CursorTrail() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       const now = Date.now();
       footprintsRef.current = footprintsRef.current.filter((f) => now - f.born < FADE_DURATION);
+
       for (const fp of footprintsRef.current) {
         const age = (now - fp.born) / FADE_DURATION;
         drawFoot(ctx, fp, (1 - age) * 0.85);
       }
+
       animationId = requestAnimationFrame(draw);
     };
     draw();
