@@ -20,7 +20,7 @@ export default function Footer() {
           LinkedIn →
         </a>
       </div>
-      <div className="max-w-6xl mx-auto mt-6 pt-6 border-t border-brand-yellow/60">
+      <div className="max-w-6xl mx-auto mt-6 pt-6 border-t border-brand-purple/80">
         <p className="text-white text-xs text-center">
           © {new Date().getFullYear()} Tom Kerlin. All rights reserved.
         </p>

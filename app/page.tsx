@@ -11,7 +11,7 @@ export default function Home() {
         </p>
         <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-6">
           AI-Enhanced<br />
-          <span className="text-brand-pink">Marketing</span><br />
+          <span className="text-brand-yellow">Marketing</span><br />
           Operations.
         </h1>
         <p className="text-white text-lg md:text-xl max-w-xl leading-relaxed mb-10">
@@ -22,7 +22,7 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center bg-brand-pink text-white px-8 py-4 rounded-full font-semibold text-base hover:bg-brand-pink/80 transition-colors"
+            className="inline-flex items-center justify-center bg-brand-yellow text-black px-8 py-4 rounded-full font-semibold text-base hover:bg-brand-yellow/80 transition-colors"
           >
             Let&apos;s Work Together →
           </Link>

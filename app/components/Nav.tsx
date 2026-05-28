@@ -19,7 +19,7 @@ export default function Nav() {
         </Link>
         <Link
           href="/contact"
-          className="bg-brand-pink text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-brand-pink/80 transition-colors"
+          className="bg-brand-pink/85 text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-brand-pink transition-colors"
         >
           Contact
         </Link>

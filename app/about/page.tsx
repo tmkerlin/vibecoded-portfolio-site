@@ -9,7 +9,7 @@ export default function AboutServices() {
         </p>
         <h1 className="text-5xl md:text-6xl font-bold text-white mb-12">
           AI-Enhanced<br />
-          <span className="text-brand-pink">Marketing Ops</span>
+          <span className="text-brand-yellow">Marketing Ops</span>
         </h1>
 
         <div className="flex flex-col md:flex-row gap-12 items-start">
