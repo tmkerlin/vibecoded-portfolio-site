@@ -1,6 +1,9 @@
 export default function Footer() {
   return (
     <footer className="relative z-30 border-t border-white/10 bg-black px-8 py-8">
+      <div className="absolute -top-12 right-[77px] text-5xl leading-none select-none pointer-events-none opacity-60" style={{ filter: "sepia(1) saturate(5) hue-rotate(270deg) brightness(0.5)" }}>
+        👾
+      </div>
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="text-center sm:text-left">
           <p className="text-brand-teal font-bold text-lg">

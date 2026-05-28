@@ -2,16 +2,11 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="relative z-10 min-h-screen flex flex-col items-start justify-center px-8 md:px-16 lg:px-24 pt-20">
-
-      {/* Alien monster in the black area */}
-      <div className="absolute right-[77px] bottom-0 text-5xl leading-none select-none pointer-events-none opacity-60" style={{ filter: "sepia(1) saturate(5) hue-rotate(270deg) brightness(0.5)" }}>
-        👾
-      </div>
+    <main className="relative z-10 flex flex-col items-start px-12 md:px-24 lg:px-32 pt-44 pb-[120px]">
 
       {/* Hero content */}
       <div className="relative z-10 max-w-4xl">
-        <p className="text-white font-mono text-sm tracking-widest uppercase mb-6">
+        <p className="text-brand-cyan font-mono text-sm tracking-widest uppercase mb-6">
           Marketing Ops × AI
         </p>
         <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-6">
