@@ -61,8 +61,21 @@ Bold, creative, high-contrast palette. Design should feel distinctive and energe
 
 ## Contact Page
 
-- Contact form for inbound inquiries
+- Contact form for inbound inquiries (fields: Name, Company (optional), Email, Message)
 - LinkedIn social link (only social platform)
+- Thank you message shown inline after submission (no separate landing page)
+
+### Email Service — Resend (chosen)
+- Founded 2022, built for Next.js/Vercel ecosystem by ex-Vercel employee
+- Available on Vercel Marketplace
+- Pairs with React Email for JSX email templates
+- Free tier: 3,000 emails/month
+- Supports custom domain email (e.g. hello@tomkerlin.com)
+
+### Other options considered
+- **Formspree** — ~2013, simple form backend, 50 submissions/month free. Limited customization.
+- **EmailJS** — ~2016, client-side email sending, security tradeoffs.
+- **SendGrid** — 2009, enterprise/high-volume, acquired by Twilio. Overkill for a portfolio site.
 
 ---
 
