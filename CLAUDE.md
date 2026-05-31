@@ -47,6 +47,17 @@ Bold, creative, high-contrast palette. Design should feel distinctive and energe
 - **Framework:** Next.js
 - **Hosting:** Vercel (Hobby/free plan)
 - **Version control:** GitHub
+- **Domain:** tomkerlin.com (to be purchased)
+
+### Domain Registrar — Cloudflare (recommended)
+- At-cost pricing (~$9-10/year for .com), no markup
+- Free WHOIS privacy by default
+- Easy DNS management (convenient since DNS needs to be updated for Vercel)
+- No upsells
+
+### Other registrars considered
+- **Namecheap** — decent option but has upsells during checkout
+- **Google Domains** — shut down in 2023, sold to Squarespace. No longer recommended.
 
 ---
 
