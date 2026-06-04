@@ -18,11 +18,11 @@ export default function AboutServices() {
           {/* Headshot */}
           <div className="flex-shrink-0 w-56 h-56">
             <Image
-              src="/headshot.png"
+              src="/headshot.jpg"
               alt="Tom Kerlin"
               width={224}
               height={224}
-              className="rounded-2xl object-cover w-full h-full"
+              className="rounded-2xl object-cover object-top w-full h-full"
             />
           </div>
 
