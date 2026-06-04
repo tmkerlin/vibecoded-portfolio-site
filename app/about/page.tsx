@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AboutServices() {
   return (
     <main className="relative z-10 min-h-screen pt-44 pb-[120px] px-8 md:px-16 lg:px-24">
@@ -13,9 +15,15 @@ export default function AboutServices() {
         </h1>
 
         <div className="flex flex-col md:flex-row gap-12 items-start">
-          {/* Photo placeholder */}
-          <div className="flex-shrink-0 w-56 h-56 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white/20 text-sm font-mono">
-            Photo
+          {/* Headshot */}
+          <div className="flex-shrink-0 w-56 h-56">
+            <Image
+              src="/headshot.png"
+              alt="Tom Kerlin"
+              width={224}
+              height={224}
+              className="rounded-2xl object-cover w-full h-full"
+            />
           </div>
 
           {/* Bio */}
