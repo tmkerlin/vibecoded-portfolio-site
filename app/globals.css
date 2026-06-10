@@ -16,3 +16,27 @@ body {
   background: #000000;
   color: #ffffff;
 }
+
+.holo-overlay {
+  background: linear-gradient(
+    125deg,
+    #ff0000 0%,
+    #ff7700 12%,
+    #ffff00 24%,
+    #00ff88 36%,
+    #00ffff 48%,
+    #0066ff 60%,
+    #cc00ff 72%,
+    #ff0099 84%,
+    #ff0000 100%
+  );
+  background-size: 400% 400%;
+  mix-blend-mode: screen;
+  animation: holo-shift 3s linear infinite;
+}
+
+@keyframes holo-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

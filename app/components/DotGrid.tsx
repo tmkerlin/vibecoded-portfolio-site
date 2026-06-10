@@ -20,6 +20,10 @@ export default function DotGrid() {
   const mouseRef = useRef({ x: -1000, y: -1000 });
   const wavesRef = useRef<Wave[]>([]);
   const frameRef = useRef(0);
+  const lastMoveRef = useRef(Date.now());
+
+  const FADE_DELAY = 1200;
+  const FADE_DURATION = 2500;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -37,6 +41,7 @@ export default function DotGrid() {
     const handleMouseMove = (e: MouseEvent) => {
       const rect = canvas.getBoundingClientRect();
       mouseRef.current = { x: e.clientX - rect.left, y: e.clientY - rect.top };
+      lastMoveRef.current = Date.now();
     };
     window.addEventListener("mousemove", handleMouseMove);
 
@@ -57,6 +62,8 @@ export default function DotGrid() {
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       const { x: mx, y: my } = mouseRef.current;
+      const idle = Date.now() - lastMoveRef.current;
+      const spotlightAlpha = idle < FADE_DELAY ? 1 : Math.max(0, 1 - (idle - FADE_DELAY) / FADE_DURATION);
       const waves = wavesRef.current;
       frameRef.current++;
 
@@ -104,7 +111,7 @@ export default function DotGrid() {
       for (let xi = 0, x = SPACING / 2; x < canvas.width; x += SPACING, xi++) {
         for (let yi = 0, y = SPACING / 2; y < canvas.height; y += SPACING, yi++) {
           const dist = Math.sqrt((x - mx) ** 2 + (y - my) ** 2);
-          const influence = Math.max(0, 1 - dist / CURSOR_RADIUS);
+          const influence = Math.max(0, 1 - dist / CURSOR_RADIUS) * spotlightAlpha;
           const ga = gradientAlpha(x, y);
           const pulse = wavePulseMap.get(`${xi},${yi}`) ?? 0;
           dots.push({ x, y, influence, ga, pulse });
