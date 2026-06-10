@@ -2,23 +2,21 @@
 import Image from "next/image";
 import { useState } from "react";
 
-// Sparkles positioned around the perimeter only
 const SPARKLES = [
-  { x: -6,  y: 12,  size: 13 },
-  { x: -8,  y: 40,  size: 10 },
-  { x: -6,  y: 68,  size: 12 },
-  { x: -4,  y: 88,  size: 9  },
-  { x: 14,  y: -6,  size: 11 },
-  { x: 42,  y: -7,  size: 13 },
-  { x: 68,  y: -5,  size: 10 },
-  { x: 88,  y: -6,  size: 12 },
-  { x: 98,  y: 15,  size: 11 },
-  { x: 100, y: 42,  size: 9  },
-  { x: 98,  y: 65,  size: 13 },
-  { x: 100, y: 88,  size: 10 },
-  { x: 18,  y: 100, size: 12 },
-  { x: 45,  y: 102, size: 10 },
-  { x: 72,  y: 100, size: 11 },
+  // Top strip (background above head)
+  { x: 6,  y: 5,  size: 14, symbol: "✻" },
+  { x: 30, y: 4,  size: 13, symbol: "✶" },
+  { x: 55, y: 5,  size: 15, symbol: "✳" },
+  { x: 78, y: 4,  size: 12, symbol: "✽" },
+  { x: 90, y: 6,  size: 14, symbol: "✻" },
+  // Left background strip
+  { x: 4,  y: 22, size: 13, symbol: "✽" },
+  { x: 5,  y: 42, size: 15, symbol: "✳" },
+  { x: 4,  y: 60, size: 12, symbol: "✶" },
+  // Right background strip
+  { x: 88, y: 22, size: 14, symbol: "✶" },
+  { x: 87, y: 42, size: 13, symbol: "✻" },
+  { x: 88, y: 60, size: 15, symbol: "✽" },
 ];
 
 export default function HoloHeadshot() {
@@ -26,7 +24,7 @@ export default function HoloHeadshot() {
 
   return (
     <div
-      className="no-cursor-trail flex-shrink-0 w-56 h-56 relative rounded-2xl"
+      className="no-cursor-trail flex-shrink-0 w-56 h-56 relative rounded-2xl overflow-hidden"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -38,7 +36,6 @@ export default function HoloHeadshot() {
         className="object-cover object-top w-full h-full"
       />
 
-      {/* Sparkles */}
       <div className={`absolute inset-0 transition-opacity duration-300 pointer-events-none ${hovered ? "opacity-100" : "opacity-0"}`}>
         {SPARKLES.map((s, i) => (
           <span
@@ -49,10 +46,10 @@ export default function HoloHeadshot() {
               top: `${s.y}%`,
               fontSize: `${s.size}px`,
               color: "white",
-              textShadow: "0 0 6px white, 0 0 14px rgba(255,255,255,0.8)",
+              textShadow: "0 0 6px white, 0 0 14px rgba(255,255,255,0.7)",
             }}
           >
-            ✦
+            {s.symbol}
           </span>
         ))}
       </div>
