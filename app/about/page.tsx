@@ -16,7 +16,7 @@ export default function AboutServices() {
 
         <div className="flex flex-col md:flex-row gap-12 items-start">
           {/* Headshot */}
-          <div className="flex-shrink-0 w-56 h-56">
+          <div className="no-cursor-trail flex-shrink-0 w-56 h-56">
             <Image
               src="/headshot.jpg"
               alt="Tom Kerlin"

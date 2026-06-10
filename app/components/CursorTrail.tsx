@@ -72,6 +72,9 @@ export default function CursorTrail() {
 
       if (!last) { lastPosRef.current = { x, y }; return; }
 
+      const elUnder = document.elementFromPoint(e.clientX, e.clientY);
+      if (elUnder?.closest(".no-cursor-trail")) { lastPosRef.current = { x, y }; return; }
+
       const dist = Math.sqrt((x - last.x) ** 2 + (y - last.y) ** 2);
       if (dist < STEP_DISTANCE) return;
 
