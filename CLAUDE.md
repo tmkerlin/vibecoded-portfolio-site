@@ -20,7 +20,7 @@ A personal brand showcase that doubles as a soft pitch to freelance clients. Tom
 ## Brand Colors
 
 | Color | Hex |
-|-------|-----|
+| --- | --- |
 | Black | `#000000` |
 | Teal | `#06959E` |
 | Yellow | `#EBD02D` |
@@ -28,6 +28,7 @@ A personal brand showcase that doubles as a soft pitch to freelance clients. Tom
 | Pink | `#EB1599` |
 | Blue | `#0058D4` |
 | Cyan | `#22ede3` |
+| Dark Pink (10% darker) | `#D41589` |
 
 Bold, creative, high-contrast palette. Design should feel distinctive and energetic — not corporate.
 
@@ -90,6 +91,19 @@ Bold, creative, high-contrast palette. Design should feel distinctive and energe
 
 ---
 
+## AI Symbols
+
+Ornamental asterisk/star variants used for decorative elements:
+
+| Symbol | Name |
+| --- | --- |
+| ✻ | Teardrop-spoked asterisk |
+| ✽ | Heavy teardrop-spoked asterisk |
+| ✶ | Six-pointed black star |
+| ✳ | Eight-spoked asterisk |
+
+---
+
 ## Status
 
-Ready to build.
+Live at tomkerlin.com.
