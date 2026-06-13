@@ -29,10 +29,13 @@ export default function AboutServices() {
           {/* Bio */}
           <div className="flex-1">
             <p className="text-white/80 text-lg leading-relaxed mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Hi there — I&apos;m Tom. I&apos;ve spent years as a Marketo admin and campaign executor in B2B environments, managing end-to-end campaigns across cross-functional teams and working closely with stakeholders from first concept through to reporting. Marketing ops has always been where creativity meets process, and that&apos;s exactly where I thrive.
+            </p>
+            <p className="text-white/80 text-lg leading-relaxed mb-4">
+              But let&apos;s be honest — AI is rewriting the playbook for this role, and I think that&apos;s exciting. I&apos;ve gone deep on tools like Claude, and I&apos;m genuinely amazed by what becomes possible when you work with AI. I&apos;m learning everything I can, as fast as I can, so I can help clients navigate this shift rather than get left behind by it.
             </p>
             <p className="text-white/80 text-lg leading-relaxed">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              If you&apos;re looking for someone who&apos;s equal parts creative thinker and process nerd — and who&apos;s fully bought in on where things are heading — let&apos;s talk.
             </p>
           </div>
         </div>
