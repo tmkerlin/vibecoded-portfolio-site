@@ -53,7 +53,7 @@ export default function AboutServices() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Card 1 */}
           <div className="no-cursor-trail rounded-2xl border border-white/10 bg-white/5 p-8 hover:border-brand-cyan/40 hover:bg-white/8 transition-colors">
-            <h3 className="text-xl font-bold text-white mb-3">AI Workflow Automation</h3>
+            <h3 className="text-xl font-bold text-white mb-3">Marketing Ops Strategy</h3>
             <p className="text-white/60 leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
@@ -61,7 +61,7 @@ export default function AboutServices() {
 
           {/* Card 2 */}
           <div className="no-cursor-trail rounded-2xl border border-white/10 bg-white/5 p-8 hover:border-brand-cyan/40 hover:bg-white/8 transition-colors">
-            <h3 className="text-xl font-bold text-white mb-3">MarTech Stack Consulting</h3>
+            <h3 className="text-xl font-bold text-white mb-3">Campaign Building and Orchestration</h3>
             <p className="text-white/60 leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
@@ -69,7 +69,7 @@ export default function AboutServices() {
 
           {/* Card 3 */}
           <div className="no-cursor-trail rounded-2xl border border-white/10 bg-white/5 p-8 hover:border-brand-cyan/40 hover:bg-white/8 transition-colors">
-            <h3 className="text-xl font-bold text-white mb-3">AI Integration & Implementation</h3>
+            <h3 className="text-xl font-bold text-white mb-3">AI Workflow Automation</h3>
             <p className="text-white/60 leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
@@ -77,7 +77,23 @@ export default function AboutServices() {
 
           {/* Card 4 */}
           <div className="no-cursor-trail rounded-2xl border border-white/10 bg-white/5 p-8 hover:border-brand-cyan/40 hover:bg-white/8 transition-colors">
-            <h3 className="text-xl font-bold text-white mb-3">Marketing Ops Strategy</h3>
+            <h3 className="text-xl font-bold text-white mb-3">AI Integration & Implementation</h3>
+            <p className="text-white/60 leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+
+          {/* Card 5 */}
+          <div className="no-cursor-trail rounded-2xl border border-white/10 bg-white/5 p-8 hover:border-brand-cyan/40 hover:bg-white/8 transition-colors">
+            <h3 className="text-xl font-bold text-white mb-3">MarTech Stack Consulting</h3>
+            <p className="text-white/60 leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+
+          {/* Card 6 */}
+          <div className="no-cursor-trail rounded-2xl border border-white/10 bg-white/5 p-8 hover:border-brand-cyan/40 hover:bg-white/8 transition-colors">
+            <h3 className="text-xl font-bold text-white mb-3">Coaching and Mentorship</h3>
             <p className="text-white/60 leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
