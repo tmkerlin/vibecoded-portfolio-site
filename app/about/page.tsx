@@ -53,7 +53,7 @@ export default function AboutServices() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Card 1 */}
           <div className="no-cursor-trail rounded-2xl border border-white/10 bg-white/5 p-8 hover:border-brand-cyan/40 hover:bg-white/8 transition-colors">
-            <h3 className="text-xl font-bold text-white mb-3">Marketing Ops Strategy</h3>
+            <h3 className="text-xl font-bold text-white mb-3">Marketing Ops Strategy & Support</h3>
             <p className="text-white/60 leading-relaxed">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
