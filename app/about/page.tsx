@@ -87,7 +87,7 @@ export default function AboutServices() {
           <div className="no-cursor-trail rounded-2xl border border-white/10 bg-white/5 p-8 hover:border-brand-cyan/40 hover:bg-white/8 transition-colors">
             <h3 className="text-xl font-bold text-white mb-3">Declarative Agent Design</h3>
             <p className="text-white/60 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              We&apos;re entering the agentic AI era, and declarative agent design is one of the most accessible ways to get there. Using low-code/no-code tools like Microsoft Copilot Studio, I design agents by defining their identity, instructions, expertise level, and communication style — essentially shaping how the AI thinks and responds. I also configure the knowledge sources it draws from and the actions it&apos;s authorized to trigger. No traditional coding required, but the results can be surprisingly powerful.
             </p>
           </div>
 
