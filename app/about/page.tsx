@@ -29,7 +29,7 @@ export default function AboutServices() {
           {/* Bio */}
           <div className="flex-1">
             <p className="text-white/80 text-lg leading-relaxed mb-4">
-              Hi there — I&apos;m Tom. I&apos;ve spent years as a Marketo admin and campaign executor in B2B environments, managing end-to-end campaigns across cross-functional teams and working closely with stakeholders from first concept through to reporting. Marketing ops has always been where creativity meets process, and that&apos;s exactly where I thrive.
+              Hi there — I&apos;m Tom. I&apos;ve spent years as a Marketo admin and campaign executor in B2B environments, managing end-to-end campaigns across cross-functional teams and working closely with stakeholders from first concept through to reporting. Marketing Ops has always been where creativity meets process, and that&apos;s exactly where I thrive.
             </p>
             <p className="text-white/80 text-lg leading-relaxed mb-4">
               But let&apos;s be honest — AI is rewriting the playbook for this role, and I think that&apos;s exciting. I&apos;ve gone deep on tools like Claude, and I&apos;m genuinely amazed by what becomes possible when you work with AI. I&apos;m learning everything I can, as fast as I can, so I can help clients navigate this shift rather than get left behind by it.
@@ -55,7 +55,7 @@ export default function AboutServices() {
           <div className="no-cursor-trail rounded-2xl border border-white/10 bg-white/5 p-8 hover:border-brand-cyan/40 hover:bg-white/8 transition-colors">
             <h3 className="text-xl font-bold text-white mb-3">Marketing Ops Strategy & Support</h3>
             <p className="text-white/60 leading-relaxed">
-              Marketing ops is more than just the technology — it&apos;s the intersection of people, process, and data. I help teams get more out of the infrastructure they already have, whether that means untangling siloed analytics, tightening up leaky funnels, or resolving the friction between sales and marketing. If your systems are underutilized or your processes have grown messier than they should be, this is where we start.
+              Marketing Ops is more than just the technology — it&apos;s the intersection of people, process, and data. I help teams get more out of the infrastructure they already have, whether that means untangling siloed analytics, tightening up leaky funnels, or resolving the friction between sales and marketing. If your systems are underutilized or your processes have grown messier than they should be, this is where we start.
             </p>
           </div>
 
