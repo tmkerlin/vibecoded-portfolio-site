@@ -79,7 +79,7 @@ export default function AboutServices() {
           <div className="no-cursor-trail rounded-2xl border border-white/10 bg-white/5 p-8 hover:border-brand-cyan/40 hover:bg-white/8 transition-colors">
             <h3 className="text-xl font-bold text-white mb-3">AI Integration & Implementation</h3>
             <p className="text-white/60 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              AI isn&apos;t replacing your existing marketing stack — it&apos;s becoming a new layer inside it. From configuring native AI features built into your current tools to connecting external AI systems into your workflows, integration is where the real productivity gains live. When done right, it means less time spent on manual work, smarter programs that deliver better experiences, and a shift from fixing and building to leading and growing. This is an emerging space I&apos;m actively investing in — and one I believe will define what great Marketing Ops looks like in the years ahead.
             </p>
           </div>
 
