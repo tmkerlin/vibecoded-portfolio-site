@@ -95,7 +95,7 @@ export default function AboutServices() {
           <div className="no-cursor-trail rounded-2xl border border-white/10 bg-white/5 p-8 hover:border-brand-cyan/40 hover:bg-white/8 transition-colors">
             <h3 className="text-xl font-bold text-white mb-3">Coaching & Mentorship</h3>
             <p className="text-white/60 leading-relaxed">
-              This one is personal. I&apos;ve been lucky enough to work alongside some incredibly generous people who gave their time and energy to help me grow, and I want to pay that forward. If you&apos;re navigating a career in Marketing Ops, figuring out where AI fits into your work, or just want someone to talk things through with — I&apos;m happy to listen and share whatever perspective I can.
+              This one is personal. I&apos;ve been lucky enough to work alongside some incredibly kind and generous people who gave their time and energy to help me grow, and I want to pay that forward. If you&apos;re navigating a career in Marketing Ops, figuring out where AI fits into your work, or just want someone to talk things through with — I&apos;m happy to listen and share whatever perspective I can.
             </p>
           </div>
         </div>
