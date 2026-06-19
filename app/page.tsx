@@ -22,13 +22,13 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center bg-brand-yellow text-black px-8 py-4 rounded-full font-semibold text-base hover:bg-brand-yellow/80 transition-colors"
+            className="no-cursor-trail inline-flex items-center justify-center bg-brand-yellow text-black px-8 py-4 rounded-full font-semibold text-base hover:bg-brand-yellow/80 transition-colors"
           >
             Let&apos;s Work Together →
           </Link>
           <Link
             href="/about"
-            className="inline-flex items-center justify-center border border-white/20 text-white px-8 py-4 rounded-full font-semibold text-base hover:border-white/50 hover:bg-white/5 transition-colors"
+            className="no-cursor-trail inline-flex items-center justify-center border border-white/20 text-white px-8 py-4 rounded-full font-semibold text-base hover:border-white/50 hover:bg-white/5 transition-colors"
           >
             What I Do
           </Link>
