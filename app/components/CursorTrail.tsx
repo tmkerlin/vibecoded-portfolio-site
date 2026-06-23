@@ -50,6 +50,7 @@ export default function CursorTrail() {
   const footprintsRef = useRef<Footprint[]>([]);
   const lastPosRef = useRef<{ x: number; y: number } | null>(null);
   const sideRef = useRef<"left" | "right">("left");
+  const pausedRef = useRef(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -64,7 +65,18 @@ export default function CursorTrail() {
     resize();
     window.addEventListener("resize", resize);
 
+    const handleFocusIn = (e: FocusEvent) => {
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+        pausedRef.current = true;
+        footprintsRef.current = [];
+      }
+    };
+    const handleFocusOut = () => { pausedRef.current = false; };
+    window.addEventListener("focusin", handleFocusIn);
+    window.addEventListener("focusout", handleFocusOut);
+
     const handleMouseMove = (e: MouseEvent) => {
+      if (pausedRef.current) return;
       const rect = canvas.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
@@ -113,6 +125,8 @@ export default function CursorTrail() {
       cancelAnimationFrame(animationId);
       window.removeEventListener("resize", resize);
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("focusin", handleFocusIn);
+      window.removeEventListener("focusout", handleFocusOut);
     };
   }, []);
 
