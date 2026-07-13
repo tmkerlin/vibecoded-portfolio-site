@@ -29,13 +29,13 @@ export default function AboutServices() {
           {/* Bio */}
           <div className="flex-1">
             <p className="text-white/80 text-lg leading-relaxed mb-4">
-              Hi there — I&apos;m Tom. I&apos;ve spent years as a Marketo admin and campaign executor in B2B environments, managing end-to-end campaigns across cross-functional teams and working closely with stakeholders from first concept through to reporting. Marketing Ops has always been where creativity meets process, and that&apos;s exactly where I thrive.
+              Hi there — I&apos;m Tom. I&apos;ve spent years as a Marketo administrator and campaign executor in B2B environments, managing end-to-end campaigns across cross-functional teams and working closely with stakeholders from first concept through to reporting. Marketing Ops has always been where creativity meets process, and it&apos;s the space I&apos;ve always been drawn to.
             </p>
             <p className="text-white/80 text-lg leading-relaxed mb-4">
-              But let&apos;s be honest — AI is rewriting the playbook for this role, and I think that&apos;s exciting. I&apos;ve gone deep on tools like Claude, and I&apos;m genuinely amazed by what becomes possible when you work with AI. I&apos;m learning everything I can, as fast as I can, so I can help clients navigate this shift rather than get left behind by it.
+              AI is rewriting the playbook for this role, and despite how quickly it&apos;s moving, I think that&apos;s exciting. I&apos;ve spent real time with tools like Claude, and I&apos;m genuinely amazed by what becomes possible once you&apos;re actually working with AI rather than just reading about it. I&apos;m learning everything I can, as fast as I can, so I can help clients navigate this shift instead of getting left behind by it.
             </p>
             <p className="text-white/80 text-lg leading-relaxed">
-              If you&apos;re looking for someone who&apos;s equal parts creative thinker and process nerd — and who&apos;s fully bought in on where things are heading — let&apos;s talk.
+              If you&apos;re looking for someone who&apos;s equal parts creative thinker and process nerd, and who&apos;s excited by what&apos;s on the horizon and ready for whatever it brings... let&apos;s talk.
             </p>
           </div>
         </div>
