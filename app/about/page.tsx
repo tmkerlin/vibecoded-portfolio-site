@@ -63,7 +63,7 @@ export default function AboutServices() {
           <div className="no-cursor-trail rounded-2xl border border-white/10 bg-white/5 p-8 hover:border-brand-cyan/40 hover:bg-white/8 transition-colors">
             <h3 className="text-xl font-bold text-white mb-3">Campaign Building & Orchestration</h3>
             <p className="text-white/60 leading-relaxed">
-              From brief to close — I take campaign concepts and make them a digital reality using MAPs like Marketo. That means handling everything from planning and strategy through to build, execution, monitoring, and reporting. Whether you need a single email communication or a more complex, scalable solution spanning multiple channels and/or tools, I design and orchestrate to match exactly what your audience and your business require.
+              From start to finish, I take campaign concepts and turn them into working programs using MAPs like Marketo. Knowing what you want is the first step, but that first idea can be tricky to pin down. That&apos;s why my campaign services include everything from the planning and strategy stage through to build, execution, monitoring, and reporting. Whether you need a single email communication or a more complex, scalable solution spanning multiple channels or tools, I design and orchestrate to fit the needs of your audience and your business.
             </p>
           </div>
 
