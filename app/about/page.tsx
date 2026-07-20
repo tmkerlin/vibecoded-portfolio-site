@@ -71,7 +71,7 @@ export default function AboutServices() {
           <div className="no-cursor-trail rounded-2xl border border-white/10 bg-white/5 p-8 hover:border-brand-cyan/40 hover:bg-white/8 transition-colors">
             <h3 className="text-xl font-bold text-white mb-3">Workflow Automation</h3>
             <p className="text-white/60 leading-relaxed">
-              I design both traditional rule-based workflows and the newer class of AI-driven automation. Deterministic workflows — where every step follows a defined logic — are ideal for repeatable processes, consistent execution, and anything with strict compliance requirements. But not every workflow fits neatly into a rulebook. Nondeterministic automation, powered by AI, handles the more ambiguous, context-heavy scenarios where flexibility matters more than rigidity. It&apos;s a rapidly evolving space that requires more governance upfront, but the payoff is automation that can actually think.
+              I design both traditional rule-based workflows and the newer class of AI-driven automation. Deterministic workflows, where every step follows a defined logic, are the right call when you need consistent execution or you&apos;re working under strict compliance requirements. Non-deterministic AI workflows allow the automation to produce more variable outputs, which is useful when working with unstructured data or open-ended problems. No workflow, deterministic or otherwise, outperforms the data it&apos;s built on. The real work is getting the data and the governance right before you automate anything on top of that.
             </p>
           </div>
 
