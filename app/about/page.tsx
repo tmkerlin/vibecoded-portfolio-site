@@ -79,7 +79,7 @@ export default function AboutServices() {
           <div className="no-cursor-trail rounded-2xl border border-white/10 bg-white/5 p-8 hover:border-brand-cyan/40 hover:bg-white/8 transition-colors">
             <h3 className="text-xl font-bold text-white mb-3">AI Integration & Implementation</h3>
             <p className="text-white/60 leading-relaxed">
-              AI isn&apos;t replacing your existing marketing stack — it&apos;s becoming a new layer inside it. From configuring native AI features built into your current tools to connecting external AI systems into your workflows, integration is where the real productivity gains live. When done right, it means less time spent on manual work, smarter programs that deliver better experiences, and a shift from fixing and building to leading and growing. This is an emerging space I&apos;m actively investing in — and one I believe will define what great Marketing Ops looks like in the years ahead.
+              Most marketing platforms already have AI features built into them. And since most teams are usually paying for capabilities that never get turned on, configuring those well is often the first step I take with a client. From there, the harder and more rewarding work is determining how external AI systems can integrate and enhance a team&apos;s existing workflows. This could be an LLM that drafts copy for a social media post or an agent that triages inbound leads before a rep ever sees them. When done well, external AI integrations reduce manual handoffs and let programs adjust in real time based on a prospect&apos;s intent or behavior. It&apos;s an emerging space that I&apos;m putting a lot of time into right now.
             </p>
           </div>
 
