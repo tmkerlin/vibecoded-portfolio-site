@@ -15,9 +15,9 @@ export default function Home() {
           Operations.
         </h1>
         <p className="text-white text-lg md:text-xl max-w-xl leading-relaxed mb-10">
-          I help businesses modernize their marketing workflows with AI and
-          agentic systems — so your team moves faster and your stack works
-          smarter.
+          I help marketing teams get more out of the tools, workflows, and
+          data they already have by building the automation and AI
+          integrations that make day-to-day execution less manual.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
