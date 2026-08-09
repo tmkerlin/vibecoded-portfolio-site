@@ -29,10 +29,10 @@ export default function AboutServices() {
           {/* Bio */}
           <div className="flex-1">
             <p className="text-white/80 text-lg leading-relaxed mb-4">
-              Hi there — I&apos;m Tom. I&apos;ve spent years as a Marketo administrator and campaign executor in B2B environments, managing end-to-end campaigns across cross-functional teams and working closely with stakeholders from first concept through to reporting. Marketing Ops has always been where creativity meets process, and it&apos;s the space I&apos;ve always been drawn to.
+              Hi there — I&apos;m Tom. I&apos;ve spent years as a Marketo administrator and campaign executor in B2B environments, building campaigns from first concept through to final reporting and working closely with stakeholders at every stage along the way. It&apos;s work that rewards both creative thinking and process discipline, and that combination is why I&apos;ve stayed in Marketing Ops this long.
             </p>
             <p className="text-white/80 text-lg leading-relaxed mb-4">
-              AI is rewriting the playbook for this role, and despite how quickly it&apos;s moving, I think that&apos;s exciting. I&apos;ve spent real time with tools like Claude, and I&apos;m genuinely amazed by what becomes possible once you&apos;re actually working with AI rather than just reading about it. I&apos;m learning everything I can, as fast as I can, so I can help clients navigate this shift instead of getting left behind by it.
+              AI is reshaping what this role looks like, and despite how fast it&apos;s moving, I think that&apos;s exciting. I&apos;ve spent real hands-on time with tools like Claude, and I&apos;m genuinely amazed by what becomes possible once you&apos;re actually building with AI instead of just reading about it. I&apos;m learning everything I can, as fast as I can, so I can bring my own firsthand experience when helping a client.
             </p>
             <p className="text-white/80 text-lg leading-relaxed">
               If you&apos;re looking for someone who&apos;s equal parts creative thinker and process nerd, and who&apos;s excited by what&apos;s on the horizon and ready for whatever it brings... let&apos;s talk.
