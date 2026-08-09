@@ -29,7 +29,7 @@ export default function AboutServices() {
           {/* Bio */}
           <div className="flex-1">
             <p className="text-white/80 text-lg leading-relaxed mb-4">
-              Hi there — I&apos;m Tom. I&apos;ve spent years as a Marketo administrator and campaign executor in B2B environments, building campaigns from first concept through to final reporting and working closely with stakeholders at every stage along the way. It&apos;s work that rewards both creative thinking and process discipline, and that combination is why I&apos;ve stayed in Marketing Ops this long.
+              Hi there — I&apos;m Tom. I&apos;ve spent years as a Marketo administrator and campaign executor in B2B environments, building campaigns from first concept through to final reporting and working closely with stakeholders at every stage along the way. It&apos;s work that rewards both creative thinking and process discipline; this combination plays to my strengths and has made me want to stay in the field.
             </p>
             <p className="text-white/80 text-lg leading-relaxed mb-4">
               AI is reshaping what this role looks like, and despite how fast it&apos;s moving, I think that&apos;s exciting. I&apos;ve spent real hands-on time with tools like Claude, and I&apos;m genuinely amazed by what becomes possible once you&apos;re actually building with AI instead of just reading about it. I&apos;m learning everything I can, as fast as I can, so I can bring my own firsthand experience when helping a client.
